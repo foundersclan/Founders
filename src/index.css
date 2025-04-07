@@ -1,12 +1,13 @@
 @import "tailwindcss";
-*{
+/* *{
   margin: 0;
   padding: 0;
-}
+} */
 body{
   scroll-behavior: smooth;
   scrollbar-color: black;
   scrollbar-width: 10px;
+  background-color: black;
 }
 .container{
   width: 100%;

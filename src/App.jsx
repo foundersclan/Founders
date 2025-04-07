@@ -1,24 +1,41 @@
 import "./index.css"
-import { LandingPage } from "./components/pages/page1"
+import { LandingPage } from "./components/pages/heroSection"
 import { NavBar } from "./components/nav"
-import { AboutUs } from "./components/pages/page2"
-import { Faqs } from "./components/pages/page4"
+import { AboutUs } from "./components/pages/about"
+import { Faqs } from "./components/pages/faqs"
 import { DemoLandingPage } from "./components/pages/demopage"
-import { ContactPage } from "./components/pages/page5"
+import { ContactPage } from "./components/pages/contact"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Applayout } from "./components/Applayout"
+import { Home } from "./components/pages/home"
+import { Errorpage } from "./components/pages/errorPage"
+
+const router = createBrowserRouter ([
+  {
+    path : "/",
+    element : <Applayout/>,
+    errorElement : <Errorpage/>,
+    children : [
+      {
+        path : "/",
+        element : <Home/>
+      },
+      {
+        path : "/about",
+        element : <AboutUs/>
+      },
+      {
+        path : "/faqs",
+        element : <Faqs/>
+      },
+      {
+        path : "/contact",
+        element : <ContactPage/>
+      },
+    ]
+  }
+])
 const App = () => {
-  return (
-    <section className="container">
-      <header className="flex justify-center">
-        <NavBar />
-      </header>
-      <main>
-        <LandingPage />
-        {/* <DemoLandingPage/> */}
-        <AboutUs/>
-        <Faqs/>
-        {/* <ContactPage/> */}
-      </main>
-    </section>
-  )
+  return <RouterProvider router={router}></RouterProvider>
 }
 export default App
