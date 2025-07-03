@@ -5,7 +5,7 @@ import { Footer } from "./pages/footer"
 export const Applayout = ()=>{
     return (
         <>
-        <Header/>
+        {/* <Header/> */}
         <Outlet/>
         <Footer/>
         </>

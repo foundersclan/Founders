@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom"
-
+import { NavLink as Navlink } from "react-router-dom";
 export const Errorpage = ()=>{
     const error = useRouteError();
     console.log(error);

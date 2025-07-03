@@ -4,7 +4,7 @@
   padding: 0;
 } */
 body{
-  scroll-behavior: smooth;
+  scroll-behavior:calc(100vh - 100px);
   scrollbar-color: black;
   scrollbar-width: 10px;
   background-color: black;
@@ -16,3 +16,6 @@ body{
   background: linear-gradient(100deg, rgb(0, 0, 0) 100%, rgba(245,245,245,1) 100%);
   overflow: hidden;
 }
+html{
+  scroll-behavior: smooth;
+} 

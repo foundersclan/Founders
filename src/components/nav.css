@@ -1,3 +1,8 @@
 .nav-padding{
-    padding: 8px;
+    padding: 50px;
+}
+.background{
+background: none;
+background: #364036;
+background: radial-gradient(circle, rgba(54, 64, 54, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }

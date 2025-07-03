@@ -2,30 +2,30 @@ import { NavLink } from "react-router-dom"
 import "./nav.css"
 export const NavBar = () => {
     return (
-        <nav className=" w-[1456px] h-[44px] flex justify-around items-center bg-black  text-white nav-padding">
+        <nav className=" w-full h-20 flex justify-between items-center bg-none text-white nav-padding scroll-smooth">
             <div>
-                <h1 className="text-3xl font-extrabold text-yellow-500"><NavLink to="/">Founders</NavLink></h1>
+                <h1 className="text-4xl font-extrabold text-yellow-500"><NavLink to="/">Founders</NavLink></h1>
             </div>
-            <ul className="flex gap-6">
+            <ul className="flex text-xl mt-1 gap-6">
                 <li>
-                    <NavLink to="/about">
+                    <a href="#about">
                         About Us
-                    </NavLink>
+                    </a>
                 </li>
                 <li>
-                    <NavLink to="/about">
-                        How it Works?
-                    </NavLink>
+                    <a href="#testimonial">
+                        Testimonials
+                    </a>
                 </li>
                 <li>
-                    <NavLink to="/faqs">
+                    <a href="#faqs">
                         FAQ's
-                    </NavLink>
+                    </a>
                 </li>
                 <li>
-                    <NavLink to="/contact">
+                    <a href="#contact">
                         Contact us
-                    </NavLink>
+                    </a>
                 </li>
             </ul>
         </nav>
