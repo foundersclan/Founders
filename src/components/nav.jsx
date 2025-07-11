@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom"
 import "./nav.css"
+import { useEffect, useState } from "react"
 export const NavBar = () => {
+     const [nameText , setNameText] = useState('Founders')
+    useEffect(()=>{
+        // setNameText( e => e.split(''))
+    })   
     return (
         <nav className=" w-full h-20 flex justify-between items-center bg-none text-white nav-padding scroll-smooth">
             <div>

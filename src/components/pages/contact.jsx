@@ -28,7 +28,6 @@ export const ContactPage = () => {
             alert("Please fill all the fields");
             setLoading(true)
             navigate("/")
-            
         }
         else {
         try{
@@ -46,7 +45,7 @@ export const ContactPage = () => {
     }
     return (
         <section className="w-[100%] h-[100%] mt-5 marginPaddingTop" id="contact">
-            {loading}
+            {loading && <h1>Please Wait</h1>}
             <div className="flex space-between w-[70%] ml-49 ">
             <div className="w-[40%]">
             <h1 className="text-white font-bold text-4xl">Social Media</h1>
@@ -75,7 +74,7 @@ export const ContactPage = () => {
                 <h1 className="text-white font-bold text-4xl">Connect with us:</h1>
             </div>
             <div className="w-[100%] h-auto text-white flex flex-col gap-8 justify-center">
-                <input className="bg-gray-600 w-[100%] h-11 rounded-md" type="text" name="username" placeholder="name"
+                <input className="bg-gray-600 w-[100%] h-11 rounded-md p-1" type="text" name="username" placeholder="Name"
                 value={userDetails.username}
                 onChange={(e)=>{
                     setUserDetails({
@@ -84,7 +83,7 @@ export const ContactPage = () => {
                     })
                 }}
                  required />
-                <input className="bg-gray-600  w-[100%] h-11 rounded-md" type="email" name="email" placeholder="email"
+                <input className="bg-gray-600  w-[100%] h-11 rounded-md p-1" type="email" name="email" placeholder="Email"
                 value={userDetails.email}
                 onChange={(e)=>{
                     setUserDetails({
@@ -93,7 +92,7 @@ export const ContactPage = () => {
                     })
                 }}
                  required />
-                <input className="bg-gray-600  w-[100%] h-11 rounded-md" type="tel" name="number" placeholder="phone no."
+                <input className="bg-gray-600  w-[100%] h-11 rounded-md p-1" type="tel" name="number" placeholder="Phone no."
                 value={userDetails.number}
                 onChange={(e)=>{
                     setUserDetails({
