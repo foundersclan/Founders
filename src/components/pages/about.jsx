@@ -76,7 +76,7 @@ export const AboutUs = () => {
                             </p>
                         </span>
                         <div className="w-full h-full absolute bg-black opacity-55"></div>
-                        <img className="w-full h-full object-cover rounded-2xl" src="src\assets\groupimg2.jpg" alt="" />
+                        <img className="w-full h-full object-cover rounded-2xl" src="public\assets\groupimg2.jpg" alt="" />
                     </div>
                 </div>
             </div>
