@@ -7,14 +7,14 @@ export const Faqs = () => {
         setActiveItem(activeItem === id ? null : id);
     }
     return (
-        <section className="w-[100%] marginPaddingTop flex flex-col justify-center items-center " id="faqs">
-            <div className="text-white w-[70%] h-full">
+        <section className="w-full p-5 md:mt-[40px] md:p-5 flex flex-col justify-center items-center " id="faqs">
+            <div className="text-white w-full md:w-[70%] h-full">
                 <p className="underline font-bold">FAQ's</p>
-                <h1 className="font-bold text-4xl marginBottom underline text-yellow-500">Frequently Asked Questions</h1>
+                <h1 className="font-bold md:text-4xl text-2xl marginBottom underline text-yellow-500">Frequently Asked Questions</h1>
                 <ul className="flex flex-col gap-4">
                   {  faqs.map((faq) => {
                         return (
-                            <li key={faq.id} className={`${activeItem === faq.id ? "h-auto" : "h-14"} w-4xl bg-gray-600 rounded-md text-xl hover:scale-105 transition-[4s]`} onClick={() => handleClick(faq.id)}>
+                            <li key={faq.id} className={`${activeItem === faq.id ? "h-auto" : "h-15"} w-full md:w-4xl bg-gray-600 rounded-md text-[15px] md:text-xl hover:scale-105 transition-[4s]`} onClick={() => handleClick(faq.id)}>
                                 <h1 className="mt-3 ml-2 font-bold">{faq.question}</h1>
                                 <p className={`${activeItem === faq.id ? "block" : "hidden"} mt-3 ml-2`}>{faq.answer}</p>
                             </li>

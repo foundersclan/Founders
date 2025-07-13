@@ -26,10 +26,10 @@ export const AboutUs = () => {
     return (
         <section className="w-[100%] h-[100%] flex flex-col justify-center  bg-blend-lighten " id="about">
             <div className=" w-full h-full aboutbg  ">
-                <h1 className="text-4xl font-bold  text-yellow-500 underline pt-12 pl-12 fade-in" ref={el=>fadeRefs.current[0]=el}>About Us</h1>
-                <div className="text-white w-full about flex justify-center mt-8 gap-2 p-12 fade-in" ref={el=>fadeRefs.current[1]=el}>
+                <h1 className="text-4xl font-bold  text-yellow-500 underline p-5 md:pt-12 md:pl-12 fade-in" ref={el=>fadeRefs.current[0]=el}>About Us</h1>
+                <div className="text-white w-full about flex justify-center mt-5 md:mt-8 gap-2 p-5 md:p-12 fade-in" ref={el=>fadeRefs.current[1]=el}>
                     <span className="w-full h-[100%]">
-                        <p className="text-3xl font-bold ml-2">
+                        <p className="md:text-3xl text-2xl font-bold ml-1 md:ml-2">
                             <i>
                                 " Welcome to <b className="text-yellow-500">Founders</b>, a community of like-minded individuals dedicated to personal growth and development. Our club is a supportive family that fosters a growth mindset, helping members achieve their full potential in various aspects of life. We believe in empowering each other to pursue their dreams, overcome challenges, and live a fulfilling life. Through interactive sessions, expert insights, and collaborative learning, we strive to create a nurturing environment that promotes holistic growth."
                             </i>
@@ -37,8 +37,8 @@ export const AboutUs = () => {
                     </span>
                 </div>
                 <div className="fade-in " ref={el=>fadeRefs.current[2]=el}>
-                    <h1 className="text-4xl font-bold text-yellow-500 underline pt-12 pl-12">What makes us different?</h1>
-                    <p className="text-3xl text-white p-12"><b>Unlike traditional communities, ours is built on the foundation of mutual support, growth, and development. Here are a few things that set us apart:</b>
+                    <h1 className="md:text-4xl text-2xl font-bold text-yellow-500 underline p-5 md:pt-12 md:pl-12">What makes us different?</h1>
+                    <p className="md:text-3xl text-xl text-white p-5 md:p-12"><b>Unlike traditional communities, ours is built on the foundation of mutual support, growth, and development. Here are a few things that set us apart:</b>
                         <ul className="list-disc mt-3">
                             <li className="mt-3 mb-3">
                               <b className="text-yellow-500">Growth-oriented mindset:</b> We focus on cultivating a mindset that embraces challenges, learns from failures, and strives for continuous improvement. 
@@ -69,9 +69,9 @@ export const AboutUs = () => {
                 </div>
                 <div className="w-full h-full">
                     <div className="w-full h-full mt-10 relative ">
-                        <span className="ml-2 w-[99%] h-auto block absolute z-10 top-1/2 fade-in"ref={el=>fadeRefs.current[3]=el}>
-                            <h1 className="text-3xl font-bold mt-4 text-yellow-500">Our Team</h1>
-                            <p className="text-2xl  text-white font-bold">
+                        <span className="md:ml-2 w-[99%] h-auto block absolute z-10 top-1/4 md:top-1/2 fade-in"ref={el=>fadeRefs.current[3]=el}>
+                            <h1 className="md:text-3xl text-md font-bold mt-4 text-yellow-500">Our Team</h1>
+                            <p className="md:text-2xl text-xs  text-white font-bold">
                                 Our team is comprised of passionate individuals who share a common vision of personal growth and development. We're driven by a desire to help others unlock their potential and achieve their goals. With diverse backgrounds and expertise, our team brings a wealth of knowledge and experience to the table. We're committed to creating a supportive community that inspires and motivates members to strive for excellence.
                             </p>
                         </span>

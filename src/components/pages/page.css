@@ -1,8 +1,8 @@
 .main-div{
-    width : 100vw;
+    width : 100%;
     height: 100vh;
     display: flex;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     overflow-y: hidden;
     background-image: url("src/assets/DALL·E 2025-02-24 19.49.58 - A faceless entrepreneur standing with arms crossed, wearing a stylish black business suit in a dark theme. The figure has a modern smartwatch and a sl.webp");
     background-attachment: fixed;
@@ -12,11 +12,12 @@
     justify-content: center;
     animation-name: personopacity;
     animation-duration: 2s;
+    
 }
 .content{
     width: 100%;
     height: 100%;
-    padding: 50px;
+    /* padding: 50px; */
     z-index: 1;
     animation-name: floatingtext ;
     animation-duration: 3s;
@@ -51,8 +52,8 @@
     object-fit: cover;
 }
 .marginPaddingTop{
-    margin-top: 40px;
-    padding-top: 20px;
+        margin-top: 40px;
+        padding-top: 20px;
 }
 .marginBottom{
     margin-bottom: 30px;

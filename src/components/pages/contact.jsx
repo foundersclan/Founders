@@ -44,18 +44,18 @@ export const ContactPage = () => {
     }
     }
     return (
-        <section className="w-[100%] h-[100%] mt-5 marginPaddingTop" id="contact">
+        <section className="w-full h-full p-5 md:mt-5 md:p-5 " id="contact">
             {loading && <h1>Please Wait</h1>}
-            <div className="flex space-between w-[70%] ml-49 ">
+            <div className="flex space-between w-full md:w-[70%] md:ml-49 ">
             <div className="w-[40%]">
-            <h1 className="text-white font-bold text-4xl">Social Media</h1>
-            <span className="text-white flex gap-6 text-3xl mt-4">
+            <h1 className="text-white font-bold text-2xl md:text-4xl">Social Media</h1>
+            <span className="text-white flex gap-6 text-xl md:text-3xl mt-4">
                 <a href=""><FaInstagram/></a>
                 <a href=""><FaYoutube /></a>
                 <a href=""><FaLinkedinIn /></a>
             </span>
-            <span className="text-white text-md font-bold">
-                <h1 className="text-4xl mt-7">Links:</h1>
+            <span className="text-white text-xs  md:text-md font-bold">
+                <h1 className="md:text-4xl text-2xl mt-7">Links:</h1>
                 <ul className="mt-4">
                     <li className="hover:underline">
                         <a href="/">Home</a>
@@ -71,7 +71,7 @@ export const ContactPage = () => {
             </div>
             <form action="" className="w-[60%] flex flex-col gap-4">
             <div>
-                <h1 className="text-white font-bold text-4xl">Connect with us:</h1>
+                <h1 className="text-white font-bold text-2xl md:text-4xl">Connect with us:</h1>
             </div>
             <div className="w-[100%] h-auto text-white flex flex-col gap-8 justify-center">
                 <input className="bg-gray-600 w-[100%] h-11 rounded-md p-1" type="text" name="username" placeholder="Name"

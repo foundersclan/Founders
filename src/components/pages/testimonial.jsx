@@ -26,12 +26,12 @@ export const Testimonial = ()=>{
          }, [])
     return(
         <section className="w-full h-full mt-5" id="testimonial">
-            <h1 className="text-4xl font-bold text-yellow-500 underline pt-12 pl-12">
+            <h1 className="md:text-4xl text-2xl font-bold text-yellow-500 underline p-5 md:pt-12 md:pl-12">
                 What Our Members Say?
             </h1>
             <div className="w-full h-full flex justify-center items-center relative side-in" ref={el=>sideRefs.current[0]=el}>
-                <h1 className="text-9xl text-yellow-500 font-extrabold opacity-25 shadow-2xl  shadow-yellow-500 absolute">Reviews</h1>
-                    <ul  className="w-lvw h-auto grid grid-cols-3 relative justify-center items-center pl-12 mt-5 gap-4">
+                <h1 className="md:text-9xl text-8xl text-yellow-500 font-extrabold opacity-25 shadow-2xl  shadow-yellow-500 absolute">Reviews</h1>
+                    <ul  className="w-lvw h-auto grid grid-cols-1 md:grid-cols-3 relative justify-center items-center pl-12 mt-5 gap-4">
                         {
                             Reviews.map((review)=>{
                                 return(
