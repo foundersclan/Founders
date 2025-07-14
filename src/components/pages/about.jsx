@@ -1,6 +1,7 @@
 import { useEffect,useRef } from "react"
 import "./page.css"
 export const AboutUs = () => {
+
     const fadeRefs = useRef([]);
     useEffect(() => {
         const observer = new window.IntersectionObserver((entries)=>{
