@@ -1,6 +1,7 @@
 import { useEffect,useRef } from "react"
 import "./page.css"
 export const AboutUs = () => {
+
     const fadeRefs = useRef([]);
     useEffect(() => {
         const observer = new window.IntersectionObserver((entries)=>{
@@ -76,7 +77,7 @@ export const AboutUs = () => {
                             </p>
                         </span>
                         <div className="w-full h-full absolute bg-black opacity-55"></div>
-                        <img className="w-full h-full object-cover rounded-2xl" src="public\assets\groupimg2.jpg" alt="" />
+                        <img className="w-full h-full object-cover rounded-2xl" src="/assets/groupimg2.jpg" alt="" />
                     </div>
                 </div>
             </div>

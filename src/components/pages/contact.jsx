@@ -73,8 +73,8 @@ export const ContactPage = () => {
             <div>
                 <h1 className="text-white font-bold text-2xl md:text-4xl">Connect with us:</h1>
             </div>
-            <div className="w-[100%] h-auto text-white flex flex-col gap-8 justify-center">
-                <input className="bg-gray-600 w-[100%] h-11 rounded-md p-1" type="text" name="username" placeholder="Name"
+            <div className="w-full h-auto text-white flex flex-col gap-8 justify-center">
+                <input className="bg-gray-600 w-full h-11 rounded-md p-1" type="text" name="username" placeholder="Name"
                 value={userDetails.username}
                 onChange={(e)=>{
                     setUserDetails({
@@ -83,7 +83,7 @@ export const ContactPage = () => {
                     })
                 }}
                  required />
-                <input className="bg-gray-600  w-[100%] h-11 rounded-md p-1" type="email" name="email" placeholder="Email"
+                <input className="bg-gray-600  w-full h-11 rounded-md p-1" type="email" name="email" placeholder="Email"
                 value={userDetails.email}
                 onChange={(e)=>{
                     setUserDetails({
@@ -92,7 +92,7 @@ export const ContactPage = () => {
                     })
                 }}
                  required />
-                <input className="bg-gray-600  w-[100%] h-11 rounded-md p-1" type="tel" name="number" placeholder="Phone no."
+                <input className="bg-gray-600  w-full h-11 rounded-md p-1" type="tel" name="number" placeholder="Phone no."
                 value={userDetails.number}
                 onChange={(e)=>{
                     setUserDetails({
@@ -101,7 +101,7 @@ export const ContactPage = () => {
                     })
                 }}
                  required />
-                <button type="button" className="text-yellow-500 w-[100%] h-10 rounded-2xl border-2 border-yellow-500" onClick={addUser}>Join Community!</button>
+                <button type="button" className="text-yellow-500 w-full h-10 rounded-2xl border-2 border-yellow-500" onClick={addUser}>Join Community!</button>
             </div>
             </form>
             </div>

@@ -4,7 +4,7 @@
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image: url("public/assets/DALL·E 2025-02-24 19.49.58 - A faceless entrepreneur standing with arms crossed, wearing a stylish black business suit in a dark theme. The figure has a modern smartwatch and a sl.webp");
+    background-image: url("/assets/DALL·E 2025-02-24 19.49.58 - A faceless entrepreneur standing with arms crossed, wearing a stylish black business suit in a dark theme. The figure has a modern smartwatch and a sl.webp");
     background-attachment: fixed;
     background-position:center;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@
     margin-bottom: 30px;
 }
 .aboutbg{
-    background-image: url("public/assets/team.png");
+    background-image: url("/assets/team.png");
     background-attachment: fixed;
     background-position:center;
     background-repeat: no-repeat;

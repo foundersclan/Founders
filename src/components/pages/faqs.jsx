@@ -7,7 +7,7 @@ export const Faqs = () => {
         setActiveItem(activeItem === id ? null : id);
     }
     return (
-        <section className="w-full p-5 md:mt-[40px] md:p-5 flex flex-col justify-center items-center " id="faqs">
+        <section className="w-full p-5 md:mt-[40px] flex flex-col justify-center items-center " id="faqs">
             <div className="text-white w-full md:w-[70%] h-full">
                 <p className="underline font-bold">FAQ's</p>
                 <h1 className="font-bold md:text-4xl text-2xl marginBottom underline text-yellow-500">Frequently Asked Questions</h1>
