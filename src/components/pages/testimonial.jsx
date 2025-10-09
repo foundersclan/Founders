@@ -1,4 +1,4 @@
-import "../pages/page.css"
+
 import Reviews from "../../api/reviews.json"
 import { useEffect,useRef } from "react"
 export const Testimonial = ()=>{
