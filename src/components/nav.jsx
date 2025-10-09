@@ -24,7 +24,7 @@ export const NavBar = () => {
         <div className="flex justify-between items-center p-4 bg-transparent">
             <div className="flex items-center gap-10">
                 <span className="text-5xl flex items-center gap-2 font-bold  text-yellow-500">
-                    <img src="public/assets/logo.jpg" className="w-15 h-15" alt="" />
+                    <img src="assets/logo.jpg" className="w-15 h-15" alt="" />
                     Founders
                     </span>
                 {/* <ul className="flex text-white gap-5 mt-4 ">
