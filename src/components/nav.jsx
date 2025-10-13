@@ -21,10 +21,10 @@ export const NavBar = () => {
         },
     ]
     return (
-        <div className="flex justify-between items-center p-4 bg-transparent">
+        <nav className=" flex justify-between items-center p-4 bg-transparent">
             <div className="flex items-center gap-10">
-                <span className="text-5xl flex items-center gap-2 font-bold  text-yellow-500">
-                    <img src="assets/logo.jpg" className="w-15 h-15" alt="" />
+                <span className="md:text-5xl text-2xl flex items-center gap-2 font-bold  text-yellow-500 ">
+                    <img src="public/assets/logo.jpg" className="md:w-15 md:h-15 w-8 h-8" alt="" />
                     Founders
                     </span>
                 {/* <ul className="flex text-white gap-5 mt-4 ">
@@ -43,10 +43,10 @@ export const NavBar = () => {
             </div>
 
             <div>
-                <button className="border-2 border-yellow-500 p-2 w-full rounded-xl text-yellow-500 font-semibold">
+                <button className="border-2 border-yellow-500 p-2 w-full rounded-xl text-yellow-500 font-semibold text-xs md:text-xl">
                     Join Community now!
                 </button>
             </div>
-        </div>
+        </nav>
     )
 }

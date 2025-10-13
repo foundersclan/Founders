@@ -5,7 +5,7 @@ import Hamburgericon from "./hamburgericon";
 
 export const Header = () => {
   return (
-   <header>
+   <header className="w-full">
     <NavBar/>
    </header>
   )
