@@ -10,6 +10,7 @@ import { Applayout } from "./components/Applayout"
 import { Home } from "./components/pages/home"
 import { Errorpage } from "./components/pages/errorPage"
 import { Events } from "./components/pages/events"
+import { MyState } from "./context/my-state"
 
 const router = createBrowserRouter ([
   {
@@ -41,6 +42,6 @@ const router = createBrowserRouter ([
   }
 ])
 const App = () => {
-  return <RouterProvider router={router}></RouterProvider>
+  return <MyState> <RouterProvider router={router}></RouterProvider></MyState>
 }
 export default App

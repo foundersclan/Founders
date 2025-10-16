@@ -1,15 +1,16 @@
 import { collection, addDoc, Timestamp } from "firebase/firestore";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { firedb } from "../../firebase/firebaseconfig";
 import { useNavigate } from "react-router-dom";
-import { Instagram, Twitter, Youtube } from "lucide-react";
+import { Instagram, Mail, Twitter, Youtube } from "lucide-react";
 import { BsDiscord } from "react-icons/bs";
 import { motion } from "motion/react";
+import { MyContext } from "../../context/my-context";
 export const ContactPage = () => {
-    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const { loading, setLoading } = useContext(MyContext);
     const [userDetails, setUserDetails] = useState({
         username: "",
         email: "",
@@ -26,18 +27,19 @@ export const ContactPage = () => {
     });
 
     const addUser = async () => {
+        setLoading(true)
         if (userDetails.username === "" || userDetails.email === "" || userDetails.number === "") {
             alert("Please fill all the fields");
-            setLoading(true)
             navigate("/")
         }
         else {
             try {
                 const userRef = collection(firedb, 'users');
                 await addDoc(userRef, userDetails);
-                alert("User added successfully");
                 setLoading(false);
                 navigate("/")
+                console.log(use);
+
             } catch (error) {
                 toast.error("Error adding user");
                 setLoading(false);
@@ -46,19 +48,19 @@ export const ContactPage = () => {
         }
     }
     const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.25,
-      },
-    },
-  };
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.25,
+            },
+        },
+    };
 
-  const item = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
+    const item = {
+        hidden: { opacity: 0, y: 40 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    };
 
     return (
         <section
@@ -129,8 +131,10 @@ export const ContactPage = () => {
                         >
                             Please fill the form and we will be happy to have you.
                         </motion.p>
-
-                        {/* Socials */}
+                        <span className="text-3xl text-white mt-5 font-semibold">
+                            Or
+                        </span>
+                        {/*                        
                         <motion.div
                             variants={item}
                             className="text-white mt-10 flex items-center justify-center gap-10"
@@ -156,10 +160,17 @@ export const ContactPage = () => {
                                     <Youtube className="size-10 cursor-pointer" />
                                 </motion.div>
                             </span>
-                        </motion.div>
+                        </motion.div> */}
+                        <div className="text-4xl flex flex-col gap-5 text-yellow-500 font-semibold mt-5">
+                            Reach Us at :
+                            <span className="text-xl flex items-center text-white gap-5">
+                                <Mail className="text-yellow-500 size-8"/>
+                                nishant@foundersclan.com
+                            </span>
+                        </div>
                     </motion.div>
 
-                    {/* Right Form Section */}
+
                     <motion.div
                         variants={item}
                         className="w-full md:w-1/2 h-auto text-xl text-white flex flex-col gap-8 justify-center bg-gray-950 p-4 rounded-2xl"
