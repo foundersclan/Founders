@@ -24,8 +24,7 @@ export const NavBar = () => {
         <nav className=" flex justify-between items-center p-4 bg-transparent">
             <div className="flex items-center gap-10">
                 <span className="md:text-5xl text-2xl flex items-center gap-2 font-bold  text-yellow-500 ">
-                    <img src="public/assets/logo.jpg" className="md:w-15 md:h-15 w-8 h-8" alt="" />
-                    Founders
+                    <img src="public/assets/full logo.jpg" className="md:w-1/4 md:h-1/4 w-8 h-8" alt="" />
                     </span>
                 {/* <ul className="flex text-white gap-5 mt-4 ">
                     {
@@ -43,7 +42,7 @@ export const NavBar = () => {
             </div>
 
             <div>
-                <button className="border-2 border-yellow-500 p-2 w-full rounded-xl text-yellow-500 font-semibold text-xs md:text-xl">
+                <button className="border-2 border-yellow-500 p-2 w-max rounded-xl text-yellow-500 font-semibold text-xs md:text-xl">
                     Join Community now!
                 </button>
             </div>
