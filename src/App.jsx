@@ -1,16 +1,17 @@
 import "./index.css"
-import { LandingPage } from "./components/pages/heroSection"
 import { NavBar } from "./components/nav"
-import { AboutUs } from "./components/pages/about"
-import { Faqs } from "./components/pages/faqs"
+import { AboutUs } from "./pages/about"
+import { Faqs } from "./pages/faqs"
 // import { DemoLandingPage } from "./components/pages/demopage"
-import { ContactPage } from "./components/pages/contact"
+import { ContactPage } from "./pages/contact"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Applayout } from "./components/Applayout"
-import { Home } from "./components/pages/home"
-import { Errorpage } from "./components/pages/errorPage"
-import { Events } from "./components/pages/events"
+import { Home } from "./pages/home"
+import { Errorpage } from "./pages/errorPage"
+import { Events } from "./pages/events"
 import { MyState } from "./context/my-state"
+import { Login } from "./auth/login/login"
+import Signup from "./auth/signup/signup"
 
 const router = createBrowserRouter ([
   {
@@ -31,12 +32,20 @@ const router = createBrowserRouter ([
         element : <Faqs/>
       },
       {
-        path : "/contact",
+        path : "/support",
         element : <ContactPage/>
       },
       {
         path: "/events",
         element : <Events/>
+      },
+      {
+        path: "/login",
+        element : <Login/>
+      },
+      {
+        path: "/signup",
+        element : <Signup/>
       }
     ]
   }

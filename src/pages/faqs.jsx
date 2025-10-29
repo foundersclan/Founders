@@ -1,5 +1,5 @@
 import { useState } from "react"
-import faqs from "../../api/faq's.json"
+import faqs from "../api/faq's.json"
 import { motion } from "motion/react";
 
 export const Faqs = () => {
@@ -28,11 +28,11 @@ export const Faqs = () => {
     };
     return (
         <section
-            className="w-full p-4 flex flex-col justify-center gap-5 min-h-screen bg-black"
+            className="w-full p-4 flex flex-col mb-15 justify-center gap-5 min-h-screen bg-black"
             id="faqs"
         >
             <motion.div
-                className="text-white mt-5"
+                className="text-white mt-5 "
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}

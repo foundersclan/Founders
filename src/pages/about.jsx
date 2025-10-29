@@ -36,7 +36,7 @@ export const AboutUs = () => {
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
     };
     return (
-        <section className="text-white p-4  max-h-screen mb-20 bg-black">
+        <section className="text-white p-4  max-h-screen mb-20 bg-zinc-950">
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -51,7 +51,8 @@ export const Features = () => {
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
     };
     return (
-        <section className="bg-black text-white p-4">
+        <section className="bg-black text-white p-4 ">
+
             {/* Heading */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -60,7 +61,7 @@ export const Features = () => {
                 viewport={{ once: true }}
                 className="text-center p-4"
             >
-                <h2 className="font-semibold text-white tracking-wide">
+                <h2 className="font-semibold text-white/85 tracking-wide">
                     KEY FEATURES FOR FOUNDERS
                 </h2>
                 <h1 className="text-7xl text-yellow-500 font-bold">
@@ -68,7 +69,6 @@ export const Features = () => {
                 </h1>
             </motion.div>
 
-            {/* Feature Grid */}
             <motion.div
                 variants={container}
                 initial="hidden"
@@ -86,7 +86,7 @@ export const Features = () => {
                         }}
                         whileTap={{ scale: 0.97 }}
                         transition={{ type: "spring", stiffness: 250 }}
-                        className="p-10 rounded-2xl text-center flex flex-col items-center transition-all duration-300"
+                        className="p-10 rounded-2xl  bg-gradient-to-b from-neutral-900 to-black  text-center flex flex-col items-center transition-all duration-300"
                     >
                         <motion.div
                             whileHover={{ scale: 1.2, rotate: 10 }}

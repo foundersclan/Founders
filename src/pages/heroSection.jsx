@@ -1,12 +1,6 @@
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
-import LandingPageData from "../../api/landingPage.json"
-import { Header } from "../header";
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
-import { useRef, useState, useEffect, useContext } from "react";
 import { ReactTyped } from "react-typed";
 export const LandingPage = () => {
-   
     return (
         <div className=" w-full min-h-screen flex justify-between items-center p-4"     >
             <motion.h1

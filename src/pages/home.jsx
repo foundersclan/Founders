@@ -14,11 +14,15 @@ export const Home = () => {
                 <section className="">
                     <LandingPage />
                     <AboutUs />
+                    <div className="bg-yellow-500/30 h-0.5 w-full"/>
                     <Features/>
+                    <div className="bg-yellow-500/30 h-0.5 w-full"/>
                     <TeamIntro/>
+                    <div className="bg-yellow-500/30 h-0.5 w-full"/>
                     <Insights/>
-                    {/* <Testimonial/> */}
-                    <Faqs />
+                    <div className="bg-yellow-500/30 h-0.5 w-full"/>
+                    <Testimonial/>
+                    <div className="bg-yellow-500/30 h-0.5 w-full"/>
                     <ContactPage/>
 
                 </section>

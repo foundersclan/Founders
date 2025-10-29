@@ -1,50 +1,45 @@
-import React, { useState } from 'react'
-import { FaUserAlt } from "react-icons/fa"
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross2 } from "react-icons/rx";
-const Hamburger = () => {
-    const [click, setClick] = useState(false);
-    if (click) {
-        return (
-            <div className={`fixed z-10 w-3xs h-lvh md:h-full right-0 bg-black flex flex-col p-5 gap-5 text-white`} onClick={()=> setClick(e => !e)} >
-                <RxCross2 className='text-yellow-500 text-3xl'/>
-                <button className='flex gap-5 text-xl border-2 border-yellow-500 p-3 rounded-2xl'>
-                    <FaUserAlt className='text-yellow-500 text-3xl' />Admin login
-                </button>
-                <ul className=" flex flex-col text-xl mt-1 gap-5 text-white" >
-                    <li>
-                        <a href="#about">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#testimonial">
-                            Testimonials
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#faqs">
-                            FAQ's
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact">
-                            Contact us
-                        </a>
-                    </li>
-                </ul>
-            </div>
+import { LogOut, Menu, User, Users } from "lucide-react";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-        )
-    }
-    else{
-         return (
-            <div className='w-auto h-full flex items-center justify-center p-8 md:p-12'>
-                <GiHamburgerMenu onClick={()=> setClick(e => !e)} className="text-4xl text-yellow-500"/>
-            </div>
-          )
-    }
+const Hamburger = ({ click, handleMenu }) => {
+  const links = [
+    { name: "Team", path: "/team", icon: Users },
+    { name: "About", path: "/about" },
+    { name: "Events", path: "/events" },
+    { name: "Support", path: "/support" },
+  ];
 
-}
+  return (
+    <div
+      className={`fixed top-0 right-0 z-20 min-h-full w-1/4 bg-zinc-900 p-4
+      transform transition-all duration-500 ease-in-out
+      ${click ? "translate-x-0" : "translate-x-full"}`}
+    >
+      <div className="flex flex-col">
+        <div className="flex justify-between">
+          <div className="flex items-center w-56 justify-center gap-6 rounded-2xl py-3 px-6 font-semibold text-4xl border border-yellow-500 text-yellow-500">
+            <User className="size-10" />
+            <span>Profile</span>
+          </div>
+          <Menu
+            className="size-15 mt-1 text-yellow-500 cursor-pointer"
+            onClick={handleMenu}
+          />
+        </div>
 
-export default Hamburger
+        <div className="flex flex-col items-center py-4 px-4 rounded-2xl text-white/80 text-4xl gap-8 mt-4">
+          {links.map((ele) => (
+            <NavLink key={ele.name} to={ele.path}>
+              <span className="hover:shadow-2xs transition-all shadow-yellow-500 w-full">
+                {ele.name}
+              </span>
+            </NavLink>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hamburger;

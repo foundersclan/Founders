@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom"
 import { Header } from "./header"
-import { Footer } from "./pages/footer"
+import { Footer } from "../pages/footer"
 import { motion } from "motion/react"
 import { useContext, useEffect, useState } from "react"
 import { MyContext } from "../context/my-context"
@@ -17,9 +17,17 @@ export const Applayout = () => {
     const hideRoutes = [
         '/events',
         '/login',
-        '/register'
+        '/signup',
+        '/register',
+        '/about',
+        '/support'
+    ]
+    const authHideRoutes = [
+        '/login',
+        '/signup'
     ]
     const shouldHideUi = hideRoutes.includes(location.pathname);
+    const shouldHideHeaderAndFooter = authHideRoutes.includes(location.pathname);
     if (loading) {
         return (
             <Loader/>
@@ -29,11 +37,11 @@ export const Applayout = () => {
         <>
         {
             intro ? <Intro onFinish={()=> setintro(false)}/> : 
-        <div className="bg-black w-full overflow-hidden">
+        <div className=" w-full overflow-hidden">
            
             {
                 !shouldHideUi &&
-                <div className="w-full max-h-screen absolute">
+                <div className="w-full -z-10 max-h-screen absolute">
                     <motion.img src="/assets/manwithnobackground.png" className="w-full h-screen object-contain" alt=""
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -41,11 +49,16 @@ export const Applayout = () => {
                         whileHover={{ scale: 1.05, rotateY: 5 }} />
                 </div>
             }
-            <Header />
-            <div>
+           {
+            !shouldHideHeaderAndFooter &&  <Header />
+           }
+            <div className="">
                 <Outlet />
             </div>
-            <Footer />
+             {
+            !shouldHideHeaderAndFooter &&   <Footer />
+           }
+           
         </div>
         }
         </>

@@ -4,6 +4,7 @@
     "name": "Deepak",
     "department": "Mechanical Engineering",
     "year": "First Year",
+    "designation" : "Student",
     "joined_on": "2024-02-20",
     "sessions_attended": [
       {
@@ -22,6 +23,7 @@
     "id": 3,
     "name": "Sagar",
     "department": "Mechanical",
+    "designation" : "Student",
     "sessions_attended": [
       {
         "title": "Rich Mindset and Psychology of Money",
@@ -41,21 +43,25 @@
   {
     "id": 4,
     "name": "Jivika",
+    "designation" : "Student",
     "experience": "My experience was awesome. I learned a lot and appreciate the efforts of Mr. Nishant and the community for creating a growth-focused space."
   },
   {
     "id": 5,
     "name": "Nikita",
+    "designation" : "Social Media Director",
     "experience": "Founders Community boosted my confidence and gave me clarity. Mentors care and sessions are practical. I feel lucky to have joined during college."
   },
   {
     "id": 6,
     "name": "Prashant",
+    "designation" : "Student",
     "experience": "Grateful to have found this in college. Helped gain clarity and confidence in life and career. Practical sessions with real value."
   },
   {
     "id": 7,
     "name": "Sujal Pruthi",
+    "designation" : "Mechnical Engineer",
     "sessions_attended": [
       {
         "topics": ["Finances", "Communication"],

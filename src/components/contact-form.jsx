@@ -1,17 +1,14 @@
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { useContext, useState } from "react";
-import { FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { toast } from "react-toastify";
-import { firedb } from "../../firebase/firebaseconfig";
+import { firedb } from "../firebase/firebaseconfig";
 import { useNavigate } from "react-router-dom";
 import { Instagram, Mail, Twitter, Youtube } from "lucide-react";
-import { BsDiscord } from "react-icons/bs";
 import { motion } from "motion/react";
-import { MyContext } from "../../context/my-context";
-export const ContactPage = () => {
-    const navigate = useNavigate();
-    const { loading, setLoading } = useContext(MyContext);
-    const [userDetails, setUserDetails] = useState({
+
+export const ContactForm = ()=>{
+     const navigate = useNavigate();
+       const [userDetails, setUserDetails] = useState({
         username: "",
         email: "",
         number: "",
@@ -61,24 +58,8 @@ export const ContactPage = () => {
         hidden: { opacity: 0, y: 40 },
         show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
     };
-
-    return (
-        <section
-            className="w-full min-h-screen p-5 md:mt-5 md:p-5 bg-black"
-            id="contact"
-        >
-            {loading && (
-                <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
-                    className="text-yellow-500 text-3xl font-semibold text-center"
-                >
-                    Please Wait...
-                </motion.h1>
-            )}
-
-            <motion.div
+    return(
+           <motion.div
                 variants={container}
                 initial="hidden"
                 whileInView="show"
@@ -88,26 +69,26 @@ export const ContactPage = () => {
                 {/* Headings */}
                 <motion.h1
                     variants={item}
-                    className="text-5xl md:text-7xl font-bold text-yellow-500 text-center"
+                    className="text-3xl md:text-6xl font-bold text-yellow-500 text-center"
                 >
                     Start your journey. Lead your vision.
                 </motion.h1>
 
                 <motion.span
                     variants={item}
-                    className="text-2xl w-10/12 text-white text-center"
+                    className="text-lg text-zinc-200 w-10/12 text-white text-center"
                 >
                     Gain expert advice on branding, entrepreneurship, and personal growth.
                     Access resources, past seminars, and actionable steps to launch your
                     business with confidence.
                 </motion.span>
 
-                {/* Contact Form Section */}
+               
                 <motion.form
                     variants={container}
                     className="w-full flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4"
                 >
-                    {/* Left Info Section */}
+                   
                     <motion.div
                         variants={item}
                         className="w-full md:w-1/2 text-center flex flex-col items-center"
@@ -117,7 +98,7 @@ export const ContactPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             viewport={{ once: true }}
-                            className="text-yellow-500 font-semibold text-5xl md:text-6xl"
+                            className="text-yellow-500 font-semibold text-5xl md:text-5xl"
                         >
                             Get in Touch
                         </motion.h1>
@@ -127,11 +108,11 @@ export const ContactPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
                             viewport={{ once: true }}
-                            className="text-white mt-8 text-2xl"
+                            className="text-white mt-8 text-lg"
                         >
                             Please fill the form and we will be happy to have you.
                         </motion.p>
-                        <span className="text-3xl text-white mt-5 font-semibold">
+                        <span className="text-2xl text-white mt-5 font-semibold">
                             Or
                         </span>
                         {/*                        
@@ -164,7 +145,7 @@ export const ContactPage = () => {
                         <div className="text-4xl flex flex-col gap-5 text-yellow-500 font-semibold mt-5">
                             Reach Us at :
                             <span className="text-xl flex items-center text-white gap-5">
-                                <Mail className="text-yellow-500 size-8"/>
+                                <Mail className="text-yellow-500 size-7"/>
                                 nishant@foundersclan.com
                             </span>
                         </div>
@@ -173,7 +154,7 @@ export const ContactPage = () => {
 
                     <motion.div
                         variants={item}
-                        className="w-full md:w-1/2 h-auto text-xl text-white flex flex-col gap-8 justify-center bg-gray-950 p-4 rounded-2xl"
+                        className="w-full md:w-1/2 h-auto text-xl text-white flex flex-col gap-8 justify-center bg-zinc-900 p-4 rounded-2xl"
                     >
                         <motion.input
                             whileFocus={{
@@ -181,7 +162,7 @@ export const ContactPage = () => {
                                 boxShadow: "0 0 10px rgba(255,215,0,0.3)",
                             }}
                             transition={{ duration: 0.3 }}
-                            className="bg-gray-800 placeholder:text-xl placeholder:text-gray-300 w-full h-15 rounded-md p-4 focus:outline-0 border border-transparent"
+                            className="bg-zinc-800  placeholder:text-xl placeholder:text-zinc-500 w-full h-15 rounded-md p-4 focus:outline-0 border border-transparent"
                             type="text"
                             name="username"
                             placeholder="Name"
@@ -198,7 +179,7 @@ export const ContactPage = () => {
                                 boxShadow: "0 0 10px rgba(255,215,0,0.3)",
                             }}
                             transition={{ duration: 0.3 }}
-                            className="bg-gray-800 placeholder:text-xl placeholder:text-gray-300 w-full h-15 rounded-md p-4 focus:outline-0 border border-transparent"
+                            className="bg-zinc-800 placeholder:text-xl placeholder:text-zinc-500 w-full h-15 rounded-md p-4 focus:outline-0 border border-transparent"
                             type="email"
                             name="email"
                             placeholder="Email"
@@ -215,7 +196,7 @@ export const ContactPage = () => {
                                 boxShadow: "0 0 10px rgba(255,215,0,0.3)",
                             }}
                             transition={{ duration: 0.3 }}
-                            className="bg-gray-800 placeholder:text-xl placeholder:text-gray-300 w-full h-15 rounded-md p-4 focus:outline-0 border border-transparent"
+                           className="bg-zinc-800  placeholder:text-xl placeholder:text-zinc-500 w-full h-15 rounded-md p-4 focus:outline-0 border border-transparent"
                             type="tel"
                             name="number"
                             placeholder="Phone no."
@@ -229,15 +210,13 @@ export const ContactPage = () => {
 
                         <motion.button
                             whileHover={{
-                                scale: 1.05,
-                                backgroundColor: "#FFD700",
-                                color: "#000",
+                                translateY: "-1px",
                                 boxShadow: "0 0 25px rgba(255,215,0,0.4)",
                             }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             type="button"
-                            className="text-yellow-500 w-full p-4 text-2xl font-semibold rounded-2xl border-2 border-yellow-500 hover:bg-yellow-500 hover:text-white transition-all"
+                            className="text-yellow-500 w-full p-4 text-2xl font-semibold rounded-2xl border-2 border-yellow-500  transition-all hover:-translate-y-1"
                             onClick={addUser}
                         >
                             Join Community!
@@ -245,6 +224,5 @@ export const ContactPage = () => {
                     </motion.div>
                 </motion.form>
             </motion.div>
-        </section>
     )
 }

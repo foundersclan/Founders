@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Linkedin, Youtube, X } from "lucide-react";
-export const Footer = ()=>{
-    return (
-         <footer className="bg-black  py-12 px-6 md:px-20">
+export const Footer = () => {
+  return (
+    <footer className="bg-zinc-900  py-12 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="space-y-6 flex flex-col justify-between">
           <h2 className="text-4xl font-bold text-yellow-500 tracking-wide">FOUNDERS</h2>
@@ -36,7 +36,7 @@ export const Footer = ()=>{
           </ul>
         </div>
 
-    
+
         <div>
           <h3 className="text-lg font-semibold mb-4 text-yellow-500">Connect</h3>
           <ul className="space-y-2 text-white">
@@ -53,5 +53,5 @@ export const Footer = ()=>{
         © {new Date().getFullYear()} Founders. All rights reserved.
       </div>
     </footer>
-    )
+  )
 }

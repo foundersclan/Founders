@@ -25,3 +25,16 @@ html{
    font-family: "Diplomata", serif;
   font-style: normal;
 }
+.review-card {
+  animation: cardAnimation 4 ease-in-out 10  infinite forwards none;
+}
+@keyframes cardAnimation {
+  0%{
+    opacity: 0;
+    transform: translateX(10);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
